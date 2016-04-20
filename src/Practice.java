@@ -6,7 +6,7 @@ public class Practice {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] list = {1,2,3,5};
+		int[] list = {1,2,10,5,6,3,1,2};
 		int a = FindMaxBooking(list);
 		System.out.println(a);
 	}
@@ -21,7 +21,7 @@ public class Practice {
 				max=current;
 			for(int j=0;j<results.size()-1;j++){
 				pos = results.get(j);
-				if(pos<=i){
+				if(pos+j<=i||(j>list.length&&pos<=i)){
 					pos+=current;
 					results.add(pos);
 					if(pos>max)
